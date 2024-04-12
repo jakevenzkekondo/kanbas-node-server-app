@@ -21,6 +21,12 @@ const sessionOptions = {
     secret: "kanbas",
     resave: false,
     saveUninitialized: false,
+    proxy: true,
+    cookie: {
+      sameSite: "none",
+      secure: true,
+      domain: "https://kanbas-node-server-app-2-hlkt.onrender.com",
+    },
   };
   if (process.env.NODE_ENV !== "development") {
     sessionOptions.proxy = true;
